@@ -7,7 +7,7 @@ define nginx::vhost (
   String $group			= $::nginx::config_group,
   String $mode			= $::nginx::config_mode,
   String $log_dir		= $::nginx::config_log_dir,
-  String $vhost_dir		= $::nginx::config_vhost_dir,
+  String $vhost_dir		= $::nginx::vhost_dir,
   Optional[String] $config_vdir_enable	= $::nginx::config_vdir_enable,
  ) {
   $vhost_docroot	= "$::nginx::docroot/$name"

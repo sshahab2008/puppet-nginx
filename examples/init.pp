@@ -10,3 +10,6 @@
 # https://docs.puppet.com/guides/tests_smoke.html
 #
 include ::nginx
+::nginx::vhost { $facts['fqdn']:
+  port => 80,
+}
